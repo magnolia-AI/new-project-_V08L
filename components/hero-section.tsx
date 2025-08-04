@@ -10,19 +10,29 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center -z-20"
+        style={{ 
+          backgroundImage: "url('https://storage.googleapis.com/magnolia-storage-dev-test-123/images/Ijp7TTY9QA/images')",
+          backgroundBlendMode: 'overlay',
+          backgroundColor: 'rgba(0, 0, 0, 0.4)'
+        }}
+      ></div>
+      
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">
             Hi, I'm <span className="text-primary">Alex</span>
           </h1>
           
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 h-16">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 h-16 text-white">
             <span className="inline-block">
               I'm a <TypingEffect texts={roles} />
             </span>
           </div>
           
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-10">
             I create beautiful, functional, and user-centered digital experiences that solve real-world problems.
           </p>
           
@@ -39,17 +49,12 @@ export function HeroSection() {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Link href="#projects" className="flex flex-col items-center">
+        <Link href="#projects" className="flex flex-col items-center text-white">
           <span className="text-sm mb-2">Scroll to explore</span>
           <ArrowDown className="h-6 w-6" />
         </Link>
       </div>
-      
-      {/* Background elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
-      </div>
     </section>
   )
 }
+
