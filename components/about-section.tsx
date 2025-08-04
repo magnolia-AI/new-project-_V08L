@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Calendar, Download, MapPin } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const skills = [
   { name: 'React', level: 95 },
@@ -63,41 +64,52 @@ export function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-bold mb-6">My Story</h3>
-            <p className="text-muted-foreground mb-4">
-              I'm a passionate frontend developer with over 6 years of experience creating 
-              beautiful and functional web applications. My journey began during my computer 
-              science studies where I discovered my love for turning ideas into interactive 
-              digital experiences.
-            </p>
-            <p className="text-muted-foreground mb-4">
-              I specialize in React and modern JavaScript frameworks, with a strong focus on 
-              user experience and performance. I believe in writing clean, maintainable code 
-              and staying up-to-date with the latest industry trends.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              When I'm not coding, you can find me contributing to open-source projects, 
-              writing technical articles, or exploring new hiking trails.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center text-muted-foreground">
-                <MapPin className="mr-2 h-4 w-4" />
-                <span>San Francisco, CA</span>
-              </div>
-              <div className="flex items-center text-muted-foreground">
-                <Calendar className="mr-2 h-4 w-4" />
-                <span>Available for freelance</span>
-              </div>
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="mb-8 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+              <Image 
+                src="https://storage.googleapis.com/magnolia-storage-dev-test-123/images/n06rKM6SyD/images" 
+                alt="Alex Johnson" 
+                width={300}
+                height={300}
+                className="rounded-full"
+              />
             </div>
+            <div className="text-center lg:text-left">
+              <h3 className="text-2xl font-bold mb-6">My Story</h3>
+              <p className="text-muted-foreground mb-4">
+                I'm a passionate frontend developer with over 6 years of experience creating 
+                beautiful and functional web applications. My journey began during my computer 
+                science studies where I discovered my love for turning ideas into interactive 
+                digital experiences.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                I specialize in React and modern JavaScript frameworks, with a strong focus on 
+                user experience and performance. I believe in writing clean, maintainable code 
+                and staying up-to-date with the latest industry trends.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                When I'm not coding, you can find me contributing to open-source projects, 
+                writing technical articles, or exploring new hiking trails.
+              </p>
 
-            <Button asChild>
-              <Link href="/resume.pdf" download>
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </Link>
-            </Button>
+              <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
+                <div className="flex items-center text-muted-foreground">
+                  <MapPin className="mr-2 h-4 w-4" />
+                  <span>San Francisco, CA</span>
+                </div>
+                <div className="flex items-center text-muted-foreground">
+                  <Calendar className="mr-2 h-4 w-4" />
+                  <span>Available for freelance</span>
+                </div>
+              </div>
+
+              <Button asChild>
+                <Link href="/resume.pdf" download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </Link>
+              </Button>
+            </div>
           </div>
 
           <div className="space-y-8">
@@ -143,4 +155,7 @@ export function AboutSection() {
     </section>
   )
 }
+
+
+
 
