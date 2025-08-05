@@ -10,7 +10,7 @@ const projects = [
     title: 'E-commerce Dashboard',
     description: 'A comprehensive dashboard for managing online store operations with real-time analytics.',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Redux'],
-    imageUrl: '',
+    imageUrl: '/images/images/react-logo-neon.png',
     demoUrl: '#',
     githubUrl: '#',
     category: 'frontend',
@@ -129,3 +129,4 @@ export function ProjectsSection() {
     </section>
   )
 }
+

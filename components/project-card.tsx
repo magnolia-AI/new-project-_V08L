@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ExternalLink, Github, Eye } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface ProjectCardProps {
   title: string
@@ -29,12 +30,22 @@ export function ProjectCard({
     <Card className={`flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${featured ? 'border-primary' : ''}`}>
       <div className="relative">
         <div className="aspect-video bg-muted overflow-hidden">
-          <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-            <div className="text-center p-4">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto" />
-              <p className="mt-2 text-sm text-muted-foreground">Project Image</p>
+          {imageUrl ? (
+            <Image 
+              src={imageUrl} 
+              alt={title} 
+              width={400} 
+              height={225} 
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+              <div className="text-center p-4">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto" />
+                <p className="mt-2 text-sm text-muted-foreground">Project Image</p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
         {featured && (
           <Badge className="absolute top-3 right-3">Featured</Badge>
@@ -75,3 +86,5 @@ export function ProjectCard({
     </Card>
   )
 }
+
+

@@ -10,8 +10,9 @@ export function Navigation() {
   const [open, setOpen] = useState(false)
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', href: '/' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ]
@@ -19,7 +20,7 @@ export function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
-        <Link href="#home" className="text-xl font-bold tracking-tight">
+        <Link href="/" className="text-xl font-bold tracking-tight">
           Portfolio
         </Link>
         
@@ -75,3 +76,7 @@ export function Navigation() {
     </header>
   )
 }
+
+
+
+
