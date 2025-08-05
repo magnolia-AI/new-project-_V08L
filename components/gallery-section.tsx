@@ -39,6 +39,15 @@ export function GallerySection() {
       category: 'project',
       technologies: ['Animation', 'Video']
     },
+    {
+      id: 3,
+      title: 'Portfolio Background Animation',
+      description: 'Animated background with gentle movements and lighting effects.',
+      imageUrl: '/images/portfolio-background.jpg',
+      videoUrl: '/videos/portfolio-background-animated.mp4',
+      category: 'design',
+      technologies: ['Animation', 'Background']
+    }
     // Additional gallery items can be added here
   ]
 
@@ -159,6 +168,7 @@ export function GallerySection() {
     </section>
   )
 }
+
 
 
 
