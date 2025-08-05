@@ -12,6 +12,7 @@ export function Navigation() {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Video', href: '/video' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ]
@@ -75,3 +76,4 @@ export function Navigation() {
     </header>
   )
 }
+
