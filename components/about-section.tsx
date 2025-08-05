@@ -67,7 +67,7 @@ export function AboutSection() {
           <div className="flex flex-col items-center lg:items-start">
             <div className="mb-8 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
               <Image 
-                src="/images/profile-cowboy-hat.png" 
+                src="/images/profile-cowboy-hat-final.png" 
                 alt="Alex Johnson with cowboy hat" 
                 width={300}
                 height={300}
@@ -155,6 +155,8 @@ export function AboutSection() {
     </section>
   )
 }
+
+
 
 
 
