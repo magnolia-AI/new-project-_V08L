@@ -6,12 +6,14 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import Image from 'next/image'
+import Video from '@/components/video'
 
 interface GalleryItem {
   id: number
   title: string
   description: string
   imageUrl: string
+  videoUrl?: string
   category: string
   technologies: string[]
 }
@@ -27,6 +29,15 @@ export function GallerySection() {
       imageUrl: '/images/images/react-logo-neon.png',
       category: 'logo',
       technologies: ['React', 'Design']
+    },
+    {
+      id: 2,
+      title: 'Profile Animation',
+      description: 'Animated profile video with subtle movements and lighting effects.',
+      imageUrl: '/images/profile-no-hat.jpg',
+      videoUrl: '/videos/leonardo_ddpDKuz0y1.mp4',
+      category: 'project',
+      technologies: ['Animation', 'Video']
     },
     // Additional gallery items can be added here
   ]
@@ -72,7 +83,7 @@ export function GallerySection() {
             <Dialog key={item.id}>
               <DialogTrigger asChild>
                 <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
-                  <div className="aspect-video bg-muted overflow-hidden">
+                  <div className="aspect-video bg-muted overflow-hidden relative">
                     <div className="w-full h-full flex items-center justify-center bg-black">
                       <Image 
                         src={item.imageUrl} 
@@ -81,6 +92,20 @@ export function GallerySection() {
                         height={300} 
                         className="object-contain"
                       />
+                      {item.videoUrl && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="bg-black bg-opacity-50 rounded-full p-2">
+                            <svg 
+                              xmlns="http://www.w3.org/2000/svg" 
+                              className="h-8 w-8 text-white" 
+                              viewBox="0 0 24 24" 
+                              fill="currentColor"
+                            >
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <CardHeader>
@@ -94,13 +119,26 @@ export function GallerySection() {
                 </DialogHeader>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="aspect-square bg-black rounded-lg flex items-center justify-center">
-                    <Image 
-                      src={item.imageUrl} 
-                      alt={item.title} 
-                      width={400} 
-                      height={400} 
-                      className="object-contain"
-                    />
+                    {item.videoUrl ? (
+                      <Video 
+                        src={item.videoUrl}
+                        width="100%"
+                        height="100%"
+                        controls={true}
+                        autoplay={false}
+                        loop={true}
+                        muted={false}
+                        className="rounded-lg"
+                      />
+                    ) : (
+                      <Image 
+                        src={item.imageUrl} 
+                        alt={item.title} 
+                        width={400} 
+                        height={400} 
+                        className="object-contain"
+                      />
+                    )}
                   </div>
                   <div className="flex flex-col justify-between">
                     <div>
@@ -121,3 +159,10 @@ export function GallerySection() {
     </section>
   )
 }
+
+
+
+
+
+
+
