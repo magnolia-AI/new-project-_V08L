@@ -10,7 +10,7 @@ export function HeroSection() {
   const roles = ['Software Engineer', 'Frontend Developer', 'UI/UX Designer', 'Problem Solver']
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden"> 
       {/* Background video */}
       <div className="absolute inset-0 -z-20">
         <Video 
