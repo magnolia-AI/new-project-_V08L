@@ -4,23 +4,27 @@ import { Button } from '@/components/ui/button'
 import { TypingEffect } from '@/components/typing-effect'
 import { ArrowDown } from 'lucide-react'
 import Link from 'next/link'
+import Video from '@/components/video'
 
 export function HeroSection() {
   const roles = ['Software Engineer', 'Frontend Developer', 'UI/UX Designer', 'Problem Solver']
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center -z-20"
-        style={{ 
-          backgroundImage: "url('https://storage.googleapis.com/magnolia-storage-dev-test-123/images/Ijp7TTY9QA/images')",
-          backgroundBlendMode: 'overlay',
-          backgroundColor: 'rgba(0, 0, 0, 0.4)'
-        }}
-      ></div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden"> 
+      {/* Background video */}
+      <div className="absolute inset-0 -z-20">
+        <Video 
+          src="/videos/leonardo_e3ETwAYxyu.mp4"
+          loop={true}
+          muted={true}
+          autoplay={true}
+          className="w-full h-full"
+          style={{ objectFit: 'cover' }}
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
       
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">
             Hi, I'm <span className="text-primary">Alex</span>
@@ -57,4 +61,3 @@ export function HeroSection() {
     </section>
   )
 }
-
