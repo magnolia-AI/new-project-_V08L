@@ -82,6 +82,70 @@
   --sidebar-ring: 53.9% 0.21 257;
 }
 
+/* 3D Button Styles */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  transition: all 0.15s ease-in-out;
+  background-color: #B99179;
+  color: #402A23;
+  border: 2px solid #402A23;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d:hover {
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d:active,
+.btn-3d.pressed {
+  background-color: #a8856d;
+  box-shadow: inset 2px 2px 0px #402A23;
+  transform: translate(4px, 4px);
+}
+
+.btn-3d-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  transition: all 0.15s ease-in-out;
+  background-color: #B99179;
+  color: #402A23;
+  border: 2px solid #402A23;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-circle:hover {
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-circle:active,
+.btn-3d-circle.pressed {
+  background-color: #a8856d;
+  box-shadow: inset 2px 2px 0px #402A23;
+  transform: translate(4px, 4px);
+}
+
+/* Focus styles */
+.btn-3d:focus,
+.btn-3d-circle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(185, 145, 121, 0.5);
+}
+
+
+
 
 
 

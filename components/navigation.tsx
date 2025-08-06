@@ -10,10 +10,11 @@ export function Navigation() {
   const [open, setOpen] = useState(false)
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', href: '/' },
     { name: 'Projects', href: '#projects' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Buttons', href: '/buttons' },
   ]
 
   return (
@@ -75,3 +76,6 @@ export function Navigation() {
     </header>
   )
 }
+
+
+
