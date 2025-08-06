@@ -79,6 +79,30 @@ export function GallerySection() {
       imageUrl: '/images/tech-logo.png',
       category: 'logo',
       technologies: ['Logo Design', 'Branding']
+    },
+    {
+      id: 8,
+      title: 'Website Design Mockup',
+      description: 'Modern website design with clean layout, responsive elements, and vibrant color scheme.',
+      imageUrl: '/images/website-mockup.jpg',
+      category: 'design',
+      technologies: ['Web Design', 'UI/UX']
+    },
+    {
+      id: 9,
+      title: 'Mobile App UI Design',
+      description: 'Mobile app UI design with dashboard, analytics charts, and user profile section.',
+      imageUrl: '/images/mobile-app-ui.jpg',
+      category: 'design',
+      technologies: ['Mobile Design', 'UI/UX']
+    },
+    {
+      id: 10,
+      title: 'Business Card Design',
+      description: 'Professional business card design with modern typography and minimalist layout.',
+      imageUrl: '/images/business-card-design.jpg',
+      category: 'design',
+      technologies: ['Branding', 'Print Design']
     }
   ]
 
@@ -199,6 +223,7 @@ export function GallerySection() {
     </section>
   )
 }
+
 
 
 
