@@ -103,6 +103,14 @@ export function GallerySection() {
       imageUrl: '/images/business-card-design.jpg',
       category: 'design',
       technologies: ['Branding', 'Print Design']
+    },
+    {
+      id: 11,
+      title: 'Futuristic Cityscape at Sunset',
+      description: 'A futuristic digital cityscape at sunset with glowing skyscrapers and flying vehicles.',
+      imageUrl: '/images/futuristic-cityscape-sunset.jpg',
+      category: 'design',
+      technologies: ['Digital Art', 'Futuristic']
     }
   ]
 
@@ -223,6 +231,7 @@ export function GallerySection() {
     </section>
   )
 }
+
 
 
 
