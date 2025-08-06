@@ -47,8 +47,39 @@ export function GallerySection() {
       videoUrl: '/videos/portfolio-background-animated.mp4',
       category: 'design',
       technologies: ['Animation', 'Background']
+    },
+    {
+      id: 4,
+      title: 'Cyberpunk Cityscape',
+      description: 'Futuristic cyberpunk cityscape at night with neon lights and flying vehicles.',
+      imageUrl: '/images/cyberpunk-cityscape.jpg',
+      category: 'design',
+      technologies: ['Digital Art', 'Cyberpunk']
+    },
+    {
+      id: 5,
+      title: 'Abstract Geometric Pattern',
+      description: 'Beautiful abstract geometric pattern with vibrant colors, 3D rendered.',
+      imageUrl: '/images/abstract-geometric.jpg',
+      category: 'design',
+      technologies: ['Digital Art', 'Abstract']
+    },
+    {
+      id: 6,
+      title: 'Mountain Lake Landscape',
+      description: 'Majestic mountain landscape with a crystal clear lake reflection at sunrise.',
+      imageUrl: '/images/mountain-lake.jpg',
+      category: 'design',
+      technologies: ['Digital Art', 'Nature']
+    },
+    {
+      id: 7,
+      title: 'Modern Tech Logo',
+      description: 'Modern tech company logo with abstract geometric shapes and gradient colors.',
+      imageUrl: '/images/tech-logo.png',
+      category: 'logo',
+      technologies: ['Logo Design', 'Branding']
     }
-    // Additional gallery items can be added here
   ]
 
   const categories = [
@@ -168,6 +199,8 @@ export function GallerySection() {
     </section>
   )
 }
+
+
 
 
 
