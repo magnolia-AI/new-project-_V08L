@@ -60,7 +60,7 @@ export function GallerySection() {
       id: 5,
       title: 'Abstract Geometric Pattern',
       description: 'Beautiful abstract geometric pattern with vibrant colors, 3D rendered.',
-      imageUrl: '/images/abstract-geometric.jpg',
+      imageUrl: '/images/images/abstract-geometric-pattern.jpg',
       category: 'design',
       technologies: ['Digital Art', 'Abstract']
     },
@@ -223,6 +223,7 @@ export function GallerySection() {
     </section>
   )
 }
+
 
 
 
