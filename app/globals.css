@@ -19,7 +19,8 @@
   --card-foreground: 9.8% 0.05 240;
   --popover: 100% 0 0;
   --popover-foreground: 9.8% 0.05 240;
-  --primary: 53.9% 0.21 257;
+  /* Brand primary changed to green */
+  --primary: 62% 0.18 150;
   --primary-foreground: 98.9% 0 0;
   --secondary: 95.9% 0.02 240;
   --secondary-foreground: 10% 0.03 240;
@@ -31,7 +32,8 @@
   --destructive-foreground: 98.9% 0 0;
   --border: 90% 0.03 240;
   --input: 90% 0.03 240;
-  --ring: 53.9% 0.21 257;
+  /* Focus ring aligned with primary green */
+  --ring: 62% 0.18 150;
   --chart-1: 61% 0.24 25;
   --chart-2: 39% 0.14 173;
   --chart-3: 63% 0.19 197;
@@ -39,12 +41,12 @@
   --chart-5: 67% 0.22 27;
   --sidebar: 98.9% 0 0;
   --sidebar-foreground: 26.1% 0.02 240;
-  --sidebar-primary: 53.9% 0.21 257;
+  --sidebar-primary: 62% 0.18 150;
   --sidebar-primary-foreground: 98.9% 0 0;
   --sidebar-accent: 95.9% 0.02 240;
   --sidebar-accent-foreground: 10% 0.03 240;
   --sidebar-border: 91% 0.05 220;
-  --sidebar-ring: 53.9% 0.21 257;
+  --sidebar-ring: 62% 0.18 150;
 }
 
 .dark {
@@ -54,7 +56,8 @@
   --card-foreground: 98.9% 0 0;
   --popover: 9.8% 0.05 240;
   --popover-foreground: 98.9% 0 0;
-  --primary: 53.9% 0.21 257;
+  /* Brand primary changed to green */
+  --primary: 62% 0.18 150;
   --primary-foreground: 98.9% 0 0;
   --secondary: 15.9% 0.02 240;
   --secondary-foreground: 98.9% 0 0;
@@ -66,7 +69,8 @@
   --destructive-foreground: 98.9% 0 0;
   --border: 15.9% 0.02 240;
   --input: 15.9% 0.02 240;
-  --ring: 53.9% 0.21 257;
+  /* Focus ring aligned with primary green */
+  --ring: 62% 0.18 150;
   --chart-1: 50% 0.2 220;
   --chart-2: 45% 0.15 160;
   --chart-3: 55% 0.22 30;
@@ -74,12 +78,12 @@
   --chart-5: 60% 0.18 290;
   --sidebar: 10% 0.03 240;
   --sidebar-foreground: 98.9% 0 0;
-  --sidebar-primary: 53.9% 0.21 257;
+  --sidebar-primary: 62% 0.18 150;
   --sidebar-primary-foreground: 98.9% 0 0;
   --sidebar-accent: 15.9% 0.02 240;
   --sidebar-accent-foreground: 98.9% 0 0;
   --sidebar-border: 15.9% 0.02 240;
-  --sidebar-ring: 53.9% 0.21 257;
+  --sidebar-ring: 62% 0.18 150;
 }
 
 /* 3D Button Styles */
@@ -94,9 +98,9 @@
   font-size: 1.125rem;
   line-height: 1.75rem;
   transition: all 0.15s ease-in-out;
-  background-color: #B99179;
-  color: #402A23;
-  border: 2px solid #402A23;
+  background-color: #22c55e; /* green-500 */
+  color: #ffffff;
+  border: 2px solid #14532d; /* green-900 */
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -106,8 +110,8 @@
 
 .btn-3d:active,
 .btn-3d.pressed {
-  background-color: #a8856d;
-  box-shadow: inset 2px 2px 0px #402A23;
+  background-color: #16a34a; /* green-600 */
+  box-shadow: inset 2px 2px 0px #14532d;
   transform: translate(4px, 4px);
 }
 
@@ -120,9 +124,9 @@
   height: 5rem;
   border-radius: 50%;
   transition: all 0.15s ease-in-out;
-  background-color: #B99179;
-  color: #402A23;
-  border: 2px solid #402A23;
+  background-color: #22c55e; /* green-500 */
+  color: #ffffff;
+  border: 2px solid #14532d; /* green-900 */
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -132,8 +136,8 @@
 
 .btn-3d-circle:active,
 .btn-3d-circle.pressed {
-  background-color: #a8856d;
-  box-shadow: inset 2px 2px 0px #402A23;
+  background-color: #16a34a; /* green-600 */
+  box-shadow: inset 2px 2px 0px #14532d;
   transform: translate(4px, 4px);
 }
 
@@ -141,13 +145,6 @@
 .btn-3d:focus,
 .btn-3d-circle:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(185, 145, 121, 0.5);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.4);
 }
-
-
-
-
-
-
-
 
